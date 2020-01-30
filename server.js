@@ -5,17 +5,18 @@ const cors = require("cors");
 // dotenv.config({ path: "./config/config.env" });
 const app = express();
 const keys = require("./keys");
+const connectDB = require("./config/db");
 const PORT = keys.PORT || 5000;
 
 // body-pareser
 app.use(express.json());
 
+connectDB();
+
 // cors
 app.use(cors());
 
-app.get("/api/v1/stores", (req, res, next) => {
-  res.send("hello");
-});
+app.use("/api/v1/stores/", require("./routes/stores"));
 
 app.listen(PORT, () => {
   //   if (err) console.log(err);
