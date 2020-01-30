@@ -1,0 +1,20 @@
+{
+  "name": "geo-locator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.8.10",
+    "node-geocoder": "^3.25.0",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
